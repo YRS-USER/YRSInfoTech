@@ -8,7 +8,7 @@
     if (headerMount) {
         headerMount.innerHTML = `
         <header id="siteHeader" class="topbar">
-            <div class="container-yrs h-[82px] flex justify-between items-center">
+            <div class="container-yrs h-[90px] flex justify-between items-center">
                 <a href="index.html" class="flex items-center gap-3" aria-label="YRS Infotech home">
                     <img src="assets/img/logo/YRS Logo.svg"
                          onerror="this.onerror=null; this.src='https://yrsinfotech.com/assets/img/logo/YRS%20Logo.svg';"
@@ -36,7 +36,7 @@
             <div class="flex justify-between items-center p-5 border-b border-slate-200">
                 <img src="assets/img/logo/YRS Logo.svg"
                      onerror="this.onerror=null; this.src='https://yrsinfotech.com/assets/img/logo/YRS%20Logo.svg';"
-                     alt="YRS Infotech" class="h-10 w-auto">
+                     alt="YRS Infotech" class="h-12 w-auto">
                 <button onclick="closeMobileMenu()" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-[#fff1f2] hover:text-[#ea384c] text-slate-700 transition" aria-label="Close navigation">
                     <i class="fas fa-times text-lg"></i>
                 </button>
@@ -57,15 +57,15 @@
         footerMount.innerHTML = `
         <footer class="yrs-blue-surface text-slate-200 py-8 sm:py-10 border-t border-[#0e1c54]">
             <div class="container-yrs">
-                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 pb-6 border-b border-white/15">
-                    <!-- Brand & Both Chennai Office Addresses (Fills the 2-col span cleanly with zero dead space) -->
-                    <div class="col-span-2 lg:col-span-2 flex flex-col justify-between gap-4">
-                        <a href="index.html" class="inline-flex items-center bg-white px-3.5 py-2 rounded-xl shadow-sm self-start shrink-0" aria-label="YRS Infotech home">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-6 border-b border-white/15 items-start">
+                    <!-- Brand & Both Chennai Office Addresses (5 Cols on Desktop) -->
+                    <div class="lg:col-span-5 flex flex-col justify-between gap-4">
+                        <a href="index.html" class="inline-flex items-center self-start shrink-0" aria-label="YRS Infotech home">
                             <img src="assets/img/logo/YRS Logo.svg"
                                  onerror="this.onerror=null; this.src='https://yrsinfotech.com/assets/img/logo/YRS%20Logo.svg';"
-                                 alt="YRS Infotech" class="h-9 sm:h-10 w-auto">
+                                 alt="YRS Infotech" class="footer-logo-clear">
                         </a>
-                        <div class="grid sm:grid-cols-2 gap-3.5 text-xs">
+                        <div class="grid sm:grid-cols-2 gap-3 text-xs">
                             <div class="bg-white/5 border border-white/10 rounded-xl p-3">
                                 <p class="font-bold text-white uppercase tracking-wider text-[11px] mb-1">
                                     <i class="fas fa-location-dot text-[#ea384c] mr-1.5"></i>Head Office · West Mambalam
@@ -81,32 +81,27 @@
                         </div>
                     </div>
 
-                    <!-- Quick Links (Left column on mobile 2-col grid) -->
-                    <div class="col-span-1">
-                        <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-2.5">Quick Links</h4>
-                        <ul class="space-y-1">
-                            <li><a class="footer-link !text-sm" href="index.html">Home</a></li>
-                            <li><a class="footer-link !text-sm" href="services.html">Services</a></li>
-                            <li><a class="footer-link !text-sm" href="projects.html">Projects</a></li>
-                            <li><a class="footer-link !text-sm" href="about.html">About</a></li>
-                        </ul>
+                    <!-- Unified Centered Quick Links (Tighter 2-column gap, centered in middle column) -->
+                    <div class="lg:col-span-4 lg:flex lg:flex-col lg:items-center">
+                        <div>
+                            <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3 lg:text-center">Quick Links</h4>
+                            <ul class="grid grid-cols-2 w-max gap-x-8 gap-y-2">
+                                <li><a class="footer-link !text-sm" href="index.html">Home</a></li>
+                                <li><a class="footer-link !text-sm" href="careers.html">Careers</a></li>
+                                <li><a class="footer-link !text-sm" href="services.html">Services</a></li>
+                                <li><a class="footer-link !text-sm" href="contact.html">Contact</a></li>
+                                <li><a class="footer-link !text-sm" href="projects.html">Projects</a></li>
+                                <li><button type="button" onclick="openModal('projModal')" class="footer-link !text-sm">Get a Quote</button></li>
+                                <li><a class="footer-link !text-sm" href="about.html">About</a></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <!-- Company (Right column on mobile 2-col grid) -->
-                    <div class="col-span-1">
-                        <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-2.5">Company</h4>
-                        <ul class="space-y-1">
-                            <li><a class="footer-link !text-sm" href="careers.html">Careers</a></li>
-                            <li><a class="footer-link !text-sm" href="contact.html">Contact</a></li>
-                            <li><button type="button" onclick="openModal('projModal')" class="footer-link !text-sm">Get a Quote</button></li>
-                        </ul>
-                    </div>
-
-                    <!-- Connect (Compact 2-column split on mobile: Contact links left, Social icons right) -->
-                    <div class="col-span-2 lg:col-span-1 pt-2 lg:pt-0 border-t border-white/10 lg:border-t-0">
-                        <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-2.5">Connect</h4>
+                    <!-- Connect (3 Cols on Desktop) -->
+                    <div class="lg:col-span-3 pt-2 md:pt-0 border-t border-white/10 md:border-t-0">
+                        <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Connect</h4>
                         <div class="flex flex-wrap lg:flex-col items-center lg:items-start justify-between gap-3">
-                            <ul class="space-y-1 text-xs sm:text-sm">
+                            <ul class="space-y-1.5 text-xs sm:text-sm">
                                 <li><a class="footer-link !text-xs sm:!text-sm" href="mailto:admin@yrsinfotech.com">admin@yrsinfotech.com</a></li>
                                 <li><a class="footer-link !text-xs sm:!text-sm" href="tel:+919840046168">+91 98400 46168</a></li>
                             </ul>

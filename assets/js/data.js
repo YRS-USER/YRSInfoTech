@@ -333,6 +333,10 @@ window.YRS_DATA = {
         'arch-4s-design',
         'interio-kitch-n-decor',
         'sreeka-fashions',
-        'anu-krishna'
+        'anu-krishna',
+        'redant-studio',
+        'absco',
+        'krio-decors',
+        'sihra-southern-region'
     ]
 };

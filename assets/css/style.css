@@ -27,7 +27,7 @@ h1, h2, h3, h4, .font-display {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 84px;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -178,7 +178,7 @@ main .text-base {
 }
 
 .brand-logo {
-    height: 48px;
+    height: 58px;
     width: auto;
     filter: contrast(1.06);
     transition: transform 0.22s ease;
@@ -186,12 +186,34 @@ main .text-base {
 
 @media (min-width: 640px) {
     .brand-logo {
-        height: 54px;
+        height: 68px;
     }
 }
 
 .brand-logo:hover {
     transform: scale(1.04);
+}
+
+/* Transparent Footer Logo with Subtle Crisp Edge Definition (Reduced Glow) */
+.footer-logo-clear {
+    height: 62px;
+    width: auto;
+    background: transparent !important;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.72))
+            drop-shadow(0 2px 4px rgba(255, 255, 255, 0.14));
+    transition: transform 0.24s ease, filter 0.24s ease;
+}
+
+@media (min-width: 640px) {
+    .footer-logo-clear {
+        height: 74px;
+    }
+}
+
+.footer-logo-clear:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 1.2px rgba(255, 255, 255, 0.88))
+            drop-shadow(0 3px 6px rgba(255, 255, 255, 0.2));
 }
 
 /* Navbar & Footer Dynamic Contrast Underline Hover */
@@ -523,7 +545,7 @@ main .text-base {
 
 /* Enlarged Client Logos Marquee */
 .marquee-track {
-    animation: marqueeScroll 36s linear infinite;
+    animation: marqueeScroll 48s linear infinite;
 }
 .marquee-track:hover {
     animation-play-state: paused;
